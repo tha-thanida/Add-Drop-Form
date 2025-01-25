@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+         container:{
+              center: true,
+              padding: '2rem'
+         }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+    <header class="relative">
+        <div class="flex items-center justify-center h-32 px-4">
+            <h1 class="text-lg text-center sm:text-xl md:text-2xl leading-relaxed">
+                คำร้องขอเพิ่ม-ถอน รายวิชา <br>
+                คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยธรรมศาสตร์
+            </h1>
+        </div>
+        <div class="absolute top-0 right-0 mt-4 mr-4">
+          <img class="w-32 md:w-48" src="logo.jpg" alt="logo">
+        </div>
+      </header>
+
+      <section>
+        <div class="container sm:text-base md:text-lg leading-relaxed">
+          <div class="flex justify-center mt-4">
+            <form action="">
+              <div class="mb-4">
+                <h1 class="text-lg font-medium mb-4 text-center">ข้อมูลนักศึกษา</h1>
+              </div>
+
+              <div class="mb-4">
+                <label for="date" class="block">วันที่:</label>
+                <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 focus:border-red-500 focus:outline-none transition-colors duration-300 w-full sm:w-auto" 
+                type="date" id="date" name="date" required>
+              </div>
+
+              <div class="mb-4 flex flex-wrap gap-4">
+                <div class="flex-1">
+                  <label for="title" class="block">คำนำหน้า:</label>
+                  <select class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                  id="title" name="title" required>
+                    <option value="นาย">นาย</option>
+                    <option value="นางสาว">นางสาว</option>
+                    <option value="นาง">นาง</option>
+                  </select>
+                </div>
+                <div class="flex-1">
+                  <label for="name" class="block">ชื่อ:</label>
+                  <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                  type="text" id="name" name="name" required>
+                </div>
+                <div class="flex-1">
+                    <label for="lastname" class="block">นามสกุล:</label>
+                    <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                    type="text" id="lastname" name="lastname" required>
+                </div>
+              </div>
+
+              <div class="mb-4 flex flex-wrap gap-4">
+                <div class="flex-1">
+                    <label for="student_id" class="block">รหัสนักศึกษา:</label>
+                    <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                    type="text" id="student_id" name="student_id" required>
+                </div>
+
+                <div class="flex-1">
+                  <label for="year" class="block">ชั้นปีที่:</label>
+                  <select class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                  name="year" id="year">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                  </select>
+                </div>
+                <div class="flex-1">
+                    <label for="province" class="block">สาขา:</label>
+                    <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                    type="text" id="major" name="major" required>
+                </div>
+              </div>
+
+              <div class="mb-4 flex flex-wrap gap-4">
+                <div class="flex-1">
+                    <label for="province" class="block">ที่อยู่บ้านเลขที่:</label>
+                    <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                    type="text" id="address" name="address" required>
+                </div>
+                <div class="flex-1">
+                    <label for="province" class="block">หมู่ที่:</label>
+                    <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                    type="number" id="moo" name="moo" required>
+                </div>
+                <div class="flex-1">
+                    <label for="province" class="block">ตำบล:</label>
+                    <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                    type="text" id="tumbol" name="tumbol" required>
+                </div>
+                <div class="flex-1">
+                    <label for="amphur" class="block">อำเภอ:</label>
+                    <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                    type="text" id="amphur" name="amphur" required>
+                </div>
+              </div>
+
+              <div class="mb-4 flex flex-wrap gap-4">
+                <div class="flex-1">
+                    <label for="province" class="block">จังหวัด:</label>
+                    <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                    type="text" id="province" name="province" required>
+                  </div>
+                  <div class="flex-1">
+                    <label for="zipcode" class="block">รหัสไปรษณีย์:</label>
+                    <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                    type="number" id="zipcode" name="zipcode" min="10000" max="99999" required>
+                  </div>
+                  <div class="flex-1">
+                    <label for="phone" class="block">เบอร์โทรศัพท์มือถือ:</label>
+                    <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                    type="tel" id="phone" name="phone" pattern="\d{10}"  required>
+                  </div>
+              </div>
+              <div class="mb-4">
+                <label for="teacher" class="block">อาจาร์ยที่ปรึกษา:</label>
+                <input class="bg-white-100 border-2 border-neutral-300 rounded px-2 py-1 w-full sm:w-72 focus:border-red-500 focus:outline-none transition-colors duration-300" 
+                type="text" id="teacher" name="teacher" required>
+
+              </div>
+              <div class="mb-4">
+                <h1 class="text-lg font-medium mb-4 text-center">การเพิ่ม-ถอนรายวิชา</h1>   
+              </div>
+              <div class="mb-4">
+                <h2 class="text-md font-medium mb-2">เลือกคำร้อง</h2>
+                <div class="flex items-center gap-4">
+                  
+                  <label for="add_subject" class="flex items-center gap-2">
+                    <input class="form-radio h-5 w-5 text-red-500 border-neutral-300 focus:ring-red-500" 
+                    type="radio" id="add_subject" name="request_type" value="add" required>
+                    <span>เพิ่มรายวิชา</span>
+                  </label>
+                 
+                  <label for="remove_subject" class="flex items-center gap-2">
+                    <input class="form-radio h-5 w-5 text-red-500 border-neutral-300 focus:ring-red-500" 
+                    type="radio" id="remove_subject" name="request_type" value="remove">
+                    <span>ถอนรายวิชา</span>
+                  </label>
+                </div>
+              </div>
+              
+              <div id="subject_table" >
+                <h3 class="text-md font-medium mb-4 text-gray-800">ตารางรายวิชา</h3>
+                <table class="min-w-full table-auto border border-neutral-300">
+                    <thead class="bg-gradient-to-r from-red-500 to-red-600 text-white text-md">
+                      <tr>
+                        <th class="px-6 py-3 text-center">ลําดับ</th>
+                        <th class="px-6 py-3 text-center">รหัสวิชา</th>
+                        <th class="px-6 py-3 text-center">ชื่อวิชา</th>
+                        <th class="px-6 py-3 text-center">หน่วยกิต</th>
+                        <th class="px-6 py-3 text-center">Section</th>
+                        <th class="px-6 py-3 text-center">ชื่อผู้สอน</th>
+                        <th class="px-6 py-3 text-center">เลือกวิชา</th>
+                      </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                      <tr class="text-center hover:bg-gray-100">
+                        <td class="px-6 py-3">1</td>
+                        <td class="px-6 py-3">CS266</td>
+                        <td class="px-6 py-3">กระบวนการซอฟต์แวร์และการประกันคุณภาพ</td>
+                        <td class="px-6 py-3">3</td>
+                        <td class="px-6 py-3">650001</td>
+                        <td class="px-6 py-3">อาจารย์</td>
+                        <td class="px-6 py-3">
+                          <input type="checkbox" name="subject" value="CS266" onclick="toggleReason(this)">
+                          <div id="reason_CS266" class="hidden mt-2">
+                            <textarea class="border p-2 w-full rounded-lg border-gray-300 focus:border-red-500 focus:outline-none transition-all duration-300" placeholder="กรุณากรอกเหตุผล"></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="text-center hover:bg-gray-100">
+                        <td class="px-6 py-3">2</td>
+                        <td class="px-6 py-3">CS267</td>
+                        <td class="px-6 py-3">การกำหนดและการจัดการความต้องการทางซอฟต์แวร์</td>
+                        <td class="px-6 py-3">3</td>
+                        <td class="px-6 py-3">650001</td>
+                        <td class="px-6 py-3">อาจารย์</td>
+                        <td class="px-6 py-3">
+                          <input type="checkbox" name="subject" value="CS267" onclick="toggleReason(this)">
+                          <div id="reason_CS267" class="hidden mt-2">
+                            <textarea class="border p-2 w-full rounded-lg border-gray-300 focus:border-red-500 focus:outline-none transition-all duration-300" placeholder="กรุณากรอกเหตุผล"></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="text-center hover:bg-gray-100">
+                        <td class="px-6 py-3">3</td>
+                        <td class="px-6 py-3">CS300</td>
+                        <td class="px-6 py-3">สัมมนาการโปรแกรมภาคปฏิบัติ</td>
+                        <td class="px-6 py-3">3</td>
+                        <td class="px-6 py-3">650001</td>
+                        <td class="px-6 py-3">อาจารย์</td>
+                        <td class="px-6 py-3">
+                          <input type="checkbox" name="subject" value="CS300" onclick="toggleReason(this)">
+                          <div id="reason_CS300" class="hidden mt-2">
+                            <textarea class="border p-2 w-full rounded-lg border-gray-300 focus:border-red-500 focus:outline-none transition-all duration-300" placeholder="กรุณากรอกเหตุผล"></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="text-center hover:bg-gray-100">
+                        <td class="px-6 py-3">4</td>
+                        <td class="px-6 py-3">CS348</td>
+                        <td class="px-6 py-3">แบบจำลองสำหรับวิทยาการข้อมูล</td>
+                        <td class="px-6 py-3">3</td>
+                        <td class="px-6 py-3">650001</td>
+                        <td class="px-6 py-3">อาจารย์</td>
+                        <td class="px-6 py-3">
+                          <input type="checkbox" name="subject" value="CS348" onclick="toggleReason(this)">
+                          <div id="reason_CS348" class="hidden mt-2">
+                            <textarea class="border p-2 w-full rounded-lg border-gray-300 focus:border-red-500 focus:outline-none transition-all duration-300" placeholder="กรุณากรอกเหตุผล"></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="text-center hover:bg-gray-100">
+                        <td class="px-6 py-3">5</td>
+                        <td class="px-6 py-3">CS361</td>
+                        <td class="px-6 py-3">การพัฒนาโปรแกรมประยุกต์สำหรับอุปกรณ์พกพา</td>
+                        <td class="px-6 py-3">3</td>
+                        <td class="px-6 py-3">650001</td>
+                        <td class="px-6 py-3">อาจารย์</td>
+                        <td class="px-6 py-3">
+                          <input type="checkbox" name="subject" value="CS361" onclick="toggleReason(this)">
+                          <div id="reason_CS361" class="hidden mt-2">
+                            <textarea class="border p-2 w-full rounded-lg border-gray-300 focus:border-red-500 focus:outline-none transition-all duration-300" placeholder="กรุณากรอกเหตุผล"></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="text-center hover:bg-gray-100">
+                        <td class="px-6 py-3">6</td>
+                        <td class="px-6 py-3">CS384</td>
+                        <td class="px-6 py-3">การปฏิสัมพันธ์ระหว่างมนุษย์และคอมพิวเตอร์</td>
+                        <td class="px-6 py-3">3</td>
+                        <td class="px-6 py-3">650001</td>
+                        <td class="px-6 py-3">อาจารย์</td>
+                        <td class="px-6 py-3">
+                          <input type="checkbox" name="subject" value="CS384" onclick="toggleReason(this)">
+                          <div id="reason_CS384" class="hidden mt-2">
+                            <textarea class="border p-2 w-full rounded-lg border-gray-300 focus:border-red-500 focus:outline-none transition-all duration-300" placeholder="กรุณากรอกเหตุผล"></textarea>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+              <div class="mt-4 mb-4 flex justify-center">
+                <button type="submit" class="bg-red-500 text-white px-6 py-2 rounded-md hover:bg-red-600 transition-colors duration-300">
+                  ส่งคำร้อง
+                </button>
+              </div>    
+            </form>
+          </div>
+        </div>
+      </section>    
+  <script src="script.js"></script>
+</body>
+</html>
